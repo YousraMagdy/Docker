@@ -1,3 +1,4 @@
+#!/bin/bash
 docker run -d  --name mysql yousramagdy/mysql
 docker run -i -t  --name downloader yousramagdy/downloader
 docker run -d  --name app1 --volumes-from downloader --link mysql:db yousramagdy/phpfpm
